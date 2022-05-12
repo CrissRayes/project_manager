@@ -1,3 +1,26 @@
 <h2 class="mt-2">Crear Proyecto</h2>
-
+<form method="get" action="/pages/create">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre del Proyecto</label>
+    <input type="text" class="form-control" aria-describedby="projectName">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Descripción</label>
+    <textarea type="text" class="form-control" id="projectDescription"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="start" class="form-label">Fecha de Inicio</label>
+    <input type="date" class="form-control" aria-describedby="start">
+  </div>
+  <div class="mb-3">
+    <label for="end" class="form-label">Fecha de Término</label>
+    <input type="date" class="form-control" aria-describedby="end">
+  </div>
+  <select class="form-select" aria-label="state">
+    <option selected value="1">Propuesta</option>
+    <option value="2">En Progreso</option>
+    <option value="3">Terminado</option>
+  </select>
+  <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+</form>
 
