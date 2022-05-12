@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_12_192202) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_12_212504) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.date "start"
     t.date "end"
-    t.integer "state"
+    t.integer "state", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

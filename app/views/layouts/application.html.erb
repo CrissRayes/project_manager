@@ -26,8 +26,8 @@
             <li class="nav-item"><%= link_to 'Home', pages_index_path, class: 'nav-link active' %></li>
             <li class="nav-item"><%= link_to 'Dashboard', pages_dashboard_path, class: 'nav-link active' %></li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <form class="d-flex" action="/pages/dashboard">
+            <input class="form-control me-2" type="search" placeholder="Buscar por Estado" aria-label="Search" name="state">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
         </div>

@@ -1,3 +1,16 @@
-<h2>Proyecto Creado!</h2>
-<p>Haz creado tu proyecto de manera exitosa 🥳</p>
-<p>Si lo deseas, puedes ver todos tus proyectos en el <%= link_to "Dashboard", pages_dashboard_path %></p>
+<% if @project.errors.any? %>
+<div id="error_explanation">
+  <h2 class="mt-3">Ups! No se puede guardar el proyecto:</h2>
+  <p>Regresa al 👉🏻 <%= link_to "home", pages_index_path %> e inténtalo nuevamente 😊<p>
+  <p><%= pluralize(@project.errors.count, "error") %>:</p>
+  <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% else %>
+  <h2>Proyecto Creado!</h2>
+  <p>Haz creado tu proyecto de manera exitosa 🥳</p>
+  <p>Si lo deseas, puedes ver todos tus proyectos en el <%= link_to "Dashboard", pages_dashboard_path %></p>
+<% end %>
