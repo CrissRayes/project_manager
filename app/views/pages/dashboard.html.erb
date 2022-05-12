@@ -12,18 +12,18 @@
     </tr>
   </thead>
   <tbody>
-    <% @projects.each do |prj| %>
+    <% @projects.each do |project| %>
         <tr>    
-          <th scope="row"><%= prj.id %></th>
-          <td><%= prj.name %></td>
-          <td><%= prj.description %></td>
-          <td><%= prj.start %></td>
-          <td><%= prj.end %></td>
-          <td><%= prj.state %></td>
+          <th scope="row"><%= project.id %></th>
+          <td><%= project.name %></td>
+          <td><%= project.description %></td>
+          <td><%= project.start %></td>
+          <td><%= project.end %></td>
+          <td><%= project.state %></td>
           <td>
-          <% if prj.state == 1 %> 
+          <% if project.state == 1 %> 
                   Propuesta
-              <% elsif prj.state == 2 %>
+              <% elsif project.state == 2 %>
                   En Progreso
               <% else %>
                   Terminado
